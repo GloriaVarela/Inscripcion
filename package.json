@@ -1,0 +1,11 @@
+{
+  "name": "inscripcion",
+  "version": "1.0.0",
+  "description": "Inscripcion en el Portal de Oferta Laboral",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gloria Constanza Varela Grupo41 Ciclo4 MisionTic2022",
+  "license": "ISC"
+}
