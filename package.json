@@ -9,6 +9,7 @@
   "author": "Gloria Constanza Varela Grupo41 Ciclo4 MisionTic2022",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mongoose": "^6.0.12"
   }
 }
