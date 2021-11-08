@@ -1,5 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const PersonaSchema = require("./Modelos/Personas.js");
 
 const app = express();
 const router = express.Router();
@@ -13,6 +14,28 @@ mongoose.connect("mongodb+srv://GloriaVarela:jaco201512@clusterc4gloria.ol1h5.mo
 //Operaciones CRUD
 router.get('/',(req, res) => {
     res.send("Este es el inicio de mi primera API");
+});
+
+//Insertar
+router.post('/Personas', (req, res) =>{
+    let nuevaPersona = new PersonaSchema({
+        idPersona: req.body.idPersona,
+        Nombres: req.body.Nombres,
+        Apellidos: req.body.Apellidos,
+        Direccion: req.body.Direccion,
+        CorreoElectronico: req.body.CorreoElectronico,
+        TelefonoFijo: req.body.TelefonoFijo,
+        TelefonoCelular: req.body.TelefonoCelular,
+        EnlaceSitioWeb: req.body.EnlaceSitioWeb,
+        DescripcionPerfil: req.body.Descripcion 
+    });
+
+    nuevaPersona.save(function(err, datos){
+        if(err){
+            console.log(err);
+        }
+        res.send('Registro Persona')
+    })
 });
 
 app.use(router);
